@@ -35,7 +35,7 @@
         
 		<div class="container-with-background">
             <!-- Image Section -->
-            <img src="Assets/Home.jpg" alt="Image description">
+            <img src="Assets/moon.jpeg" alt="Image description">
             <!-- Text Section -->
             <div class="overlay-text">
                 <h2>Discover, Explore, Innovate: Unleashing the Wonders of Science.</h2>
