@@ -9,40 +9,97 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <!-- External CSS Link -->
-    <link rel="stylesheet" href="styles.css"> <!-- Create a styles.css file for your custom styles -->
+    <link rel="stylesheet" href="styles.css"> 
 
-    <!-- Add any additional head elements (stylesheets, scripts, etc.) here -->
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar  navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="#">Science Museum</a>
-        <div class="container justify-content-end">
-		    
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Science Museum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="visit.html">Object & Stories</a></li>
+                <li class="nav-item"><a class="nav-link" href="see_and_do.html">See & Do</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="visit.html">Visit</a></li>
-                <li class="nav-item"><a class="nav-link" href="see_and_do.html">See & Do</a></li>
             </ul>
         </div>
     </nav>
-
     <!-- Main Content (Specific to Each Page) -->
     <main>
-        <div class="container">
-            <!-- Content of each individual page goes here -->
+        <p class="bg-light text-center">Book your free admission ticket now to visit the museum. Schools and groups can book free tickets here. </p>
+        
+		<div class="container-with-background">
+            <!-- Image Section -->
+            <img src="Assets/Home.jpg" alt="Image description">
+            <!-- Text Section -->
+            <div class="overlay-text">
+                <h2>Discover, Explore, Innovate: Unleashing the Wonders of Science.</h2>
+            </div>
+		</div>
+
+        <div class="container mt-4">
+            <h2>ABOUT SCIENCE MUSEUM</h2>
+
+            <p>
+                The Science Museum is a renowned institution dedicated to showcasing the advancements, wonders,
+and history of science and technology. It serves as a hub for education, exploration, and inspiration for people
+of all ages. Here's a brief overview: <br><br>
+
+<strong> Mission: </strong> <br>
+     Education and Outreach: The Science Museum aims to educate and inspire the public about scientific 
+     discoveries, innovations, and their impact on society.
+  <br><br>
+
+<strong> Exhibits and Collections: </strong> <br>
+     Interactive Exhibits: It features interactive exhibits, displays, and demonstrations covering various scientific
+     disciplines, from physics and chemistry to biology, astronomy, and beyond. <br><br>
+
+<strong> Historical Artefacts: </strong><br>
+    The museum houses a diverse collection of historical artifacts, scientific instruments, 
+     technological innovations, and iconic inventions, showcasing the evolution of science and technology 
+     through the ages.<br><br>
+
+<strong>Education and Outreach:</strong><br>
+     School Programs: Offers educational programs for students, engaging them through hands-on activities,
+     workshops, and demonstrations aligned with academic curricula.<br><br>
+
+ <strong> Public Engagement:</strong><br>
+      Conducts public lectures, workshops, and events to engage visitors, enthusiasts, and 
+     experts in discussions about current scientific developments and their implications.<br><br>
+
+ <strong> Research and Collaboration:</strong><br>
+     Research Initiatives: Engages in scientific research, contributing to ongoing discoveries and collaborations
+     within the scientific community.<br><br>
+    
+  <strong> Collaborations and Partnerships:</strong><br> Works with academic institutions, industry partners, and other museums
+      globally to promote scientific knowledge and innovation.<br>
+
+            </p>
+
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-light fixed-bottom">
-        <div class="container text-center">
-            <p>&copy; 2023 Science Museum. All rights reserved.</p>
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="row col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-4 container text-white col-md-4 col-sm-4">
+                <p><strong>LOCATION <br> Exhibition Road,<br> South Kensington,<br> London, SW7 2DD</strong></p>
+            </div>
+            <div class="col-lg-4 container text-center text-white col-md-4 col-sm-4">
+                <p>&copy; 2023 Science Museum. All rights reserved.</p>
+            </div>
+            <div class="col-lg-4 container text-white col-md-4 col-sm-4">
+                <p><strong>OPENING TIMINGS <br> Open Daily 10.00 - 18.00</strong></p>
+            </div>
         </div>
     </footer>
-
+    
     <!-- Bootstrap JS and Popper.js Scripts (if needed) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
