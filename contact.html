@@ -4,7 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science Museum</title>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            height: 120vh;
+        }
 
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
     <!-- Bootstrap CSS Link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -45,10 +93,31 @@
             </div>
 		</div>
 		
+		  <div class="container mt-4 Content-center">
+        
+			  <div class="contact-form">
+					<h2>GET IN TOUCH WITH US</h2>
+					<form action="#" method="post">
+						<div class="form-group">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+							<label for="message">Message:</label>
+							<textarea id="message" name="message" rows="4" required></textarea>
+						</div>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+		  </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+    <footer class="footer mt-auto py-3 bg-dark">
         <div class="row col-lg-12 col-md-12 col-sm-12">
             <div class="col-lg-4 container text-white col-md-4 col-sm-4">
                 <p><strong>LOCATION <br> Exhibition Road,<br> South Kensington,<br> London, SW7 2DD</strong></p>
