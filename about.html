@@ -1,36 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science Museum</title>
 
-    <!-- Bootstrap CSS Link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
 
-    <!-- External CSS Link -->
-    <link rel="stylesheet" href="styles.css"> 
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            color: #f2f2f2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand,
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            color: #f2f2f2;
+            text-decoration: none;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .navbar-toggler {
+            display: none; /* Hide the default Bootstrap toggle button */
+        }
+
+        .navbar-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* Hamburger Icon for Small Screens */
+        .navbar-toggler-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #f2f2f2;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .navbar-nav.show {
+                display: flex;
+            }
+
+            .nav-item {
+                margin: 0;
+                text-align: center;
+            }
+
+            .navbar-toggler {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .footer {
+            background-color: #333;
+            color: #f2f2f2;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-col {
+            flex: 1;
+        }
+
+        .footer-location,
+        .footer-opening-timings {
+            text-align: left;
+        }
+
+        .footer-center {
+            text-align: center;
+        }
+
+        
+.container-with-background {
+    position: relative;
+    overflow: hidden;
+    height: 600px; /* Set your preferred height */
+}
+
+.container-with-background img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@media (max-width: 992px) {
+    .container-with-background {
+        height: 400px; /* Adjust the height for smaller screens */
+    }
+}
+
+/* For even smaller screens like phones */
+@media (max-width: 576px) {
+    .container-with-background {
+        height: 300px; /* Adjust the height for smaller phones */
+    }
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.overlay-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.bg-light.text-center {
+    margin: 0;
+    padding: 0;
+}
+
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.left-column-text {
+    margin-left: 60px; 
+}
+
+.right-column-text {
+    margin-left: -60px; 
+}
+
+.gradient-background {
+	background: rgb(0,212,255);
+	background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,140,128,0.7819327560125613) 52%, rgba(2,0,36,0.6222688904663427) 96%);
+
+}
+.bg-light.text-center {
+    background-color: #f8f9fa; /* Change the background color as needed */
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1rem; /* Adjust the margin-top as needed */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+
+    </style>
 
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Your HTML content here -->
+    <nav class="navbar">
         <a class="navbar-brand" href="#">Science Museum</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" onclick="toggleNav()">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="visit.html">Object & Stories</a></li>
-                <li class="nav-item"><a class="nav-link" href="see_and_do.html">See & Do</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+        <ul class="navbar-nav" id="navbarNav">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="visit.html">Object & Stories</a></li>
+            <li class="nav-item"><a class="nav-link" href="see_and_do.html">See & Do</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-    <!-- Main Content (Specific to Each Page) -->
+
     <main>
         <p class="bg-light text-center">Book your free admission ticket now to visit the museum. Schools and groups can book free tickets here. </p>
         
@@ -85,25 +281,30 @@ of all ages. Here's a brief overview: <br><br>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-dark">
-        <div class="row col-lg-12 col-md-12 col-sm-12">
-            <div class="col-lg-4 container text-white col-md-4 col-sm-4">
+
+
+
+    <footer class="footer">
+        <div class="footer-row">
+            <div class="footer-col footer-location">
                 <p><strong>LOCATION <br> Exhibition Road,<br> South Kensington,<br> London, SW7 2DD</strong></p>
             </div>
-            <div class="col-lg-4 container text-center text-white col-md-4 col-sm-4">
+            <div class="footer-col footer-center">
                 <p>&copy; 2023 Science Museum. All rights reserved.</p>
             </div>
-            <div class="col-lg-4 container text-white col-md-4 col-sm-4">
+            <div class="footer-col footer-opening-timings">
                 <p><strong>OPENING TIMINGS <br> Open Daily 10.00 - 18.00</strong></p>
             </div>
         </div>
     </footer>
-    
-    <!-- Bootstrap JS and Popper.js Scripts (if needed) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navbarNav");
+            nav.classList.toggle("show");
+        }
+    </script>
 </body>
+
 </html>
