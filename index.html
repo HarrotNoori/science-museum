@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Museum</title>
+
+    <link rel="stylesheet" href="styles.css"> 
+
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Science Museum</a>
+        <button class="navbar-toggler" onclick="toggleNav()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav" id="navbarNav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="visit.html">Object & Stories</a></li>
+            <li class="nav-item"><a class="nav-link" href="see_and_do.html">See & Do</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p class="bg-light text-center">Book your free admission ticket now to visit the museum. Schools and groups can book free tickets here. </p>
+        
+		<div class="container-with-background">
+            <!-- Image Section -->
+            <img src="Assets/Home.jpg" alt="Image description">
+            <!-- Text Section -->
+            <div class="overlay-text">
+                <h2>Discover, Explore, Innovate: Unleashing the Wonders of Science.</h2>
+            </div>
+		</div>
+
+
+        <div class="gradient-background text-white py-4 mt-4">
+            <div class="row col-lg-12 col-md-12 col-sm-12">
+                <!-- Left Column -->
+                <div class="col-lg-6 col-md-6 col-sm-6 left-column-text">
+                    <div class="text-uppercase font-weight-bold">
+                        <p>Exhibition Road</br>
+                        South Kensington</br>
+                        London SW7 2DD</p>
+                        <p><u>View on Google Maps</u></p>
+                        <p>Open daily, 10.00–18.00</p>
+                    </div>
+                </div>
+    
+                <!-- Right Column -->
+                <div class="col-lg-6 col-md-6 col-sm-6 right-column-text">
+                    <div class="text-uppercase font-weight-bold">
+                        <p>Discover award-winning <br> exhibitions, iconic objects, and <br> stories of incredible scientific <br> achievement</p>
+                        <p>Entry to the museum is free. Pre- <br>booking required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="container mt-4">
+           
+            <div class="row mt-4 col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <img src="Assets/wonderlab.jpg" style="HEIGHT: 47.5%;" alt="Image description" class="SEEImage">
+                    <h3 class="mt-2">WONDERLAB: THE EQUINOR GALLERY</h3>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <img src="Assets/imax.jpg" alt="Image description" class="SEEImage">
+                    <h3 class="mt-2">IMAX: THE RONSON THEATER</h3>
+                </div>
+            </div>
+    
+        </div>
+        
+    </main>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-row">
+            <div class="footer-col footer-location">
+                <p><strong>LOCATION <br> Exhibition Road,<br> South Kensington,<br> London, SW7 2DD</strong></p>
+            </div>
+            <div class="footer-col footer-center">
+                <p>&copy; 2023 Science Museum. All rights reserved.</p>
+            </div>
+            <div class="footer-col footer-opening-timings">
+                <p><strong>OPENING TIMINGS <br> Open Daily 10.00 - 18.00</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navbarNav");
+            nav.classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>
